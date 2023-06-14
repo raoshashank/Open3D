@@ -81,6 +81,8 @@ void pybind_voxelgrid(py::module &m) {
                  "Element-wise check if a query in the list is included in "
                  "the VoxelGrid. Queries are double precision and "
                  "are mapped to the closest voxel.")
+            .def("clear_voxel", &VoxelGrid::ClearVoxels,
+                 "Only clears Voxels from the Grid.")
             .def("add_voxel", &VoxelGrid::AddVoxel, "voxel"_a,
                  "Add a new voxel into the VoxelGrid.")
             .def("carve_depth_map", &VoxelGrid::CarveDepthMap, "depth_map"_a,

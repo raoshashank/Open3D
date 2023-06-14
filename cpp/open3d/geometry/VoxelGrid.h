@@ -67,6 +67,7 @@ public:
     ~VoxelGrid() override {}
 
     VoxelGrid &Clear() override;
+    VoxelGrid &ClearVoxels();
     bool IsEmpty() const override;
     Eigen::Vector3d GetMinBound() const override;
     Eigen::Vector3d GetMaxBound() const override;

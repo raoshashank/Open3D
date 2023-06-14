@@ -32,7 +32,10 @@ VoxelGrid &VoxelGrid::Clear() {
     voxels_.clear();
     return *this;
 }
-
+VoxelGrid &VoxelGrid::ClearVoxels(){
+    voxels_.clear();
+    return *this;
+}
 bool VoxelGrid::IsEmpty() const { return !HasVoxels(); }
 
 Eigen::Vector3d VoxelGrid::GetMinBound() const {
